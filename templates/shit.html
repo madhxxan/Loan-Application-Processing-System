@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Results</title>
+    <style>
+        /* Resetting default margin and padding */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url('status.jpg');
+    background-color: #f0f0f0;
+    color: #000000;
+    background-size: cover; /* Make the background image cover the entire viewport */
+    background-position: center; /* Center the background image */
+    opacity: 0.9; /* Adjust the opacity to dim the background image */
+}
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(rgb(3, 102, 250), rgb(201, 235, 255));
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: rgb(0, 0, 0);
+            text-transform: capitalize;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .content {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .content h1 {
+    color: #59ff00;
+    text-transform: capitalize;
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: blink 1s infinite; /* Apply the blink animation */
+    text-shadow: -1px -1px 0 #000000,  
+                 1px -1px 0 #000000,  
+                 -1px 1px 0 #fff,  
+                 1px 1px 0 #00cffd;  /* Apply multiple shadows to simulate the stroke effect */
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+        .message {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .message.success {
+            color: #009900;
+        }
+
+        .message.error {
+            color: #cc0000;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1>The Application Result</h1>
+    </div>
+</header>
+
+<div class="container">
+    <section class="content">
+        <h1>Your Information Has Been Submitted. Please Wait.</h1>
+        <div class="message">
+            {% if prediction == 1 %}
+                <p>Congratulations! You are eligible for this loan.</p>
+            {% elif prediction == 0 %}
+                <p class="error">We are sorry to inform you that your request has not been accepted.</p>
+            {% endif %}
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        
+    </div>
+</footer>
+
+</body>
+</html>

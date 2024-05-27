@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRATEGIES FOR DETECTING AND FORTIFYING INTERNET LOAN SECURITY</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: linear-gradient(rgb(81, 11, 172), rgb(228, 151, 8));
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            color: white;
+        }
+
+        .registration-form {
+            margin: 50px auto;
+            width: 70%;
+            background: #f2f2f2;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-form h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form select {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .registration-form input[type="submit"] {
+            background: linear-gradient(rgb(81, 11, 172), rgb(228, 151, 8));
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .registration-form input[type="submit"]:hover {
+            background: linear-gradient(rgb(81, 11, 172), rgb(228, 151, 8));
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Digital Loan Admission System</h1>
+</header>
+
+<div class="registration-form">
+    <h2>Registration Form</h2>
+    <form action="{{url_for('prediction')}}" method="POST">
+        <label for="gender">Select Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="status">Status:</label><br>
+        <input type="radio" id="married" name="status" value="Married">
+        <label for="married">Married</label>
+        <input type="radio" id="single" name="status" value="Single">
+        <label for="single">Single</label><br><br>
+
+        <label for="dependants">Enter number of dependants:</label><br>
+        <input type="text" id="dependants" name="dependants" placeholder="3"><br><br>
+
+        <label for="education">Education Level:</label><br>
+        <select id="education" name="education">
+            <option value="Graduate">Graduate</option>
+            <option value="Not Graduate">Not Graduate</option>
+        </select><br><br>
+
+        <label for="employ">Employment status:</label><br>
+        <select id="employ" name="employ">
+            <option value="Employed">Employed</option>
+            <option value="Self Employed">Self Employed</option>
+            <option value="Both">I do both</option>
+            <option value="None">None of above</option>
+        </select><br><br>
+
+        <label for="aincome">Enter your annual income:</label><br>
+        <input type="text" id="aincome" name="aincome" placeholder="5849"><br><br>
+
+        <label for="coincome">Enter your Coincome:</label><br>
+        <input type="text" id="coincome" name="coincome" placeholder="0"><br><br>
+
+        <label for="Lamount">Loan amount:</label><br>
+        <input type="text" id="Lamount" name="Lamount" placeholder="128"><br><br>
+
+        <label for="Lamount_term">Loan amount Term:</label><br>
+        <input type="text" id="Lamount_term" name="Lamount_term" placeholder="360"><br><br>
+
+        <label for="credit">Enter your credit history:</label><br>
+        <input type="text" id="credit" name="credit" placeholder="1"><br><br>
+
+        <label for="property_area">Select your property area:</label><br>
+        <select id="property_area" name="property_area">
+            <option value="urban">Urban</option>
+            <option value="Semiurban">Semi Urban</option>
+            <option value="Rural">Rural</option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+<footer>
+    <!-- Footer content goes here -->
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+    *{
+      margin: 100;
+      padding: 100;
+      box-sizing: border-box;
+      font-family: 'Poppins',sans-serif;
+    }
+    body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure relative positioning for pseudo-element */
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to dim the image */
+}
+
+body::after {
+  content: "";
+  background-image: url('app.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Ensure the image is behind the overlay */
+}
+
+
+
+.container {
+  position: relative; /* Ensure relative positioning for the pseudo-element */
+  max-width: 700px;
+  width: 100%;
+  background-image: url('log.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  
+}
+
+.container .title {
+  font-size: 36px;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  color: rgb(255, 0, 0); /* Change text color to white */
+  animation: blink 1s infinite alternate; /* Add animation for blinking */
+}
+
+@keyframes blink {
+  from { opacity: 1; } /* Start with full opacity */
+  to { opacity: 0; } /* Blink out */
+}
+
+.container .title::before {
+  content: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, #8accfc, #2ad9c1);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background-image: url('log.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  filter: brightness(110%); /* Adjust brightness as needed */
+}
+    .content form .user-details{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px 0 12px 0;
+    }
+    form .user-details .input-box{
+      margin-bottom: 15px;
+      width: calc(100% / 2 - 20px);
+    }
+    form .input-box span.details{
+      display: block;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .container .user-details .input-box input{
+      height: 45px;
+      width: 100%;
+      outline: none;
+      font-size: 16px;
+      border-radius: 5px;
+      padding-left: 15px;
+      border: 1px solid #000000;
+      border-bottom-width: 2px;
+      transition: all 0.10s ease;
+    }
+    form .button{
+      height: 45px;
+      margin: 35px 0;
+    }
+    form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.9s ease;
+  background: linear-gradient(135deg, #02c0e6, #91eff6);
+}
+
+/* Add this CSS for the button when hovered */
+form .button input:hover {
+  background: green;
+  transition: all 0.9s ease;
+}
+
+    input:hover {
+      background-color: #a1e9f9;
+      transition: all 0.9s ease;
+    }
+    input:focus {
+      background-color: rgb(236, 158, 215);    
+    }
+    button {
+      background-color: rgb(255, 54, 54);
+      font-size: 25px;
+      padding: 5px 13px;
+      margin-top: 20px;
+      border: 4px solid whitesmoke;
+      border-radius: 10px;
+    }
+    button:hover {
+      background-color: greenyellow;
+    }
+    .radio input {
+      transform: scale(1.7);
+    }
+    @media all (min-width:800px) {
+      .body {
+        width:30%;
+        padding:10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title"><b>Registration</b></div>
+    <div class="content">
+      <form id="form" name="form" method="post" action="/reg">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details"><b>Full Name</b></span>
+            <input name="name" type="text" id="name" required pattern="[A-Za-z ]{3,32}"/>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Username</b></span>
+            <input name="uname" type="text" id="uname" required/>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Email</b></span>
+            <input name="email" type="email" id="email" required />
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Phone Number</b></span>
+            <input name="phone" type="text" id="phone" required size="10" pattern="[0-9]{10}"/>
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Age</b></span>
+            <input name="age" type="text" id="age" required size="3" />
+          </div>
+          <div class="input-box">
+            <span class="details"><b>Password</b></span>
+            <input name="psw" type="password" id="psw" required/>
+          </div>
+        </div>
+
+        <span class="gender-title"><b>Gender</b></span>
+        <select id="gender" name="gender">
+          <option name="male" id="male" value="male">male</option>
+          <option name="male" id="female" value="female">female</option>
+          <option name="none" id="none" value="not to say">Prefer not to say</option>
+        </select>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div align="center"><a style="text-decoration:underline; " href="login.html" ><b>Back</b></a></div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
