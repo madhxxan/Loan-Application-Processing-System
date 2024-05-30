@@ -49,7 +49,7 @@ This project is a comprehensive integration of front-end and back-end technologi
     </ul><h2>Installation and Setup</h2>
     <ol>
         <li><strong>Clone the Repository</strong>
-            <pre><code>git clone https://github.com/your-username/loan-application-system.git</code></pre>
+            <pre><code>git clone https://github.com/madhxxan/loan-application-system.git</code></pre>
         </li>
         <li><strong>Navigate to the Project Directory</strong>
             <pre><code>cd loan-application-system</code></pre>
