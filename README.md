@@ -1,4 +1,4 @@
-# Loan-Application-Processing-System
+# STRATEGIES FOR DETECTING AND FORTIFYING INTERNET LOAN SECURITY
 <b>Project Overview</b><br>
 This project is a comprehensive integration of front-end and back-end technologies, designed to streamline the loan application and approval process. The system combines the simplicity of HTML, CSS, and a touch of JavaScript for data management, with powerful machine learning algorithms like LSTM and random forest to predict loan approvals.<br>
 <h2>Features</h2>
